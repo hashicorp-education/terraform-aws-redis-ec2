@@ -15,8 +15,8 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "random_string" "redis_password" {
-    length = 16
-    override_special = "!&#$^-"
+  length           = 16
+  override_special = "!&#$^-"
 }
 
 resource "aws_instance" "web" {
@@ -27,6 +27,6 @@ resource "aws_instance" "web" {
   user_data = templatefile("boot.sh", { redis_password = random_string.redis_password.id })
 
   tags = {
-    Name = "terramino-cache"
+    Name = "${var.waypoint_add_on}"
   }
 }

@@ -1,5 +1,5 @@
 resource "aws_security_group" "allow_redis_traffic" {
-  name        = "allow_redis_traffic"
+  name        = "allow_redis_traffic_${var.waypoint_add_on}"
   description = "Allow inbound web traffic and all outbound traffic"
 }
 

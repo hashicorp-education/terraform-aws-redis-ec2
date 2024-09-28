@@ -13,3 +13,7 @@ variable "project_id" {
 variable "waypoint_application" {
   type = string
 }
+
+variable "waypoint_add_on" {
+  type = string
+}
