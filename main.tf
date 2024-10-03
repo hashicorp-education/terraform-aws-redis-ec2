@@ -15,8 +15,8 @@ data "aws_ami" "ubuntu" {
 }
 
 resource "random_string" "redis_password" {
-  length           = 16
-  override_special = "!&#$^-"
+  length  = 16
+  special = false
 }
 
 resource "aws_instance" "web" {
