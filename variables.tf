@@ -1,19 +1,9 @@
-variable "client_id" {
-  type = string
-}
-
-variable "client_secret" {
-  type = string
-}
-
-variable "project_id" {
-  type = string
-}
-
 variable "waypoint_application" {
   type = string
+  default = "terramino-go"
 }
 
 variable "waypoint_add_on" {
   type = string
+  default = "redis-ec2"
 }
