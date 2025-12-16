@@ -27,6 +27,7 @@ resource "aws_instance" "web" {
   user_data = templatefile("boot.sh", { redis_password = random_string.redis_password.id })
 
   tags = {
-    Name = "${var.waypoint_add_on}"
+    Name        = "${var.waypoint_add_on}"
+    Application = "${var.waypoint_application}"
   }
 }

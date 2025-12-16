@@ -13,4 +13,4 @@ echo "bind * -::*" >> /etc/redis/redis.conf
 echo "requirepass ${redis_password}" >> /etc/redis/redis.conf
 
 # Restart Redis server
-/etc/init.d/redis-server restart
+systemctl restart redis-server
